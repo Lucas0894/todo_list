@@ -50,9 +50,13 @@ function App() {
 
   return (
     <>
-     <h1>Todo App</h1>
-     <TodoForm onAddTask={onAddTask}/>
-     <TodoList taskList={taskList} onDelete={onDelete} onEdit={onEdit} onChecked={onChecked} />
+     <div className="min-h-screen grid place-items-center bg-gray-300 p-4">
+       <div className="w-full max-w-md mx-4 flex flex-col gap-4 rounded-xl bg-white shadow-2xl">
+         <h1 className="text-center text-blue-700 font-bold text-2xl p-6">Todo App</h1>
+         <TodoForm onAddTask={onAddTask}/>
+         <TodoList taskList={taskList} onDelete={onDelete} onEdit={onEdit} onChecked={onChecked} />
+      </div>
+     </div>
     </>
   )
 }
