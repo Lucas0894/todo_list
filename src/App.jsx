@@ -4,19 +4,25 @@ import { TodoForm } from "./components/TodoForm"
 
 
 function App() {
-  const [taskList, setTaskList] = useState([])
+  const [taskList, setTaskList] = useState(() => {
+  const save = localStorage.getItem("tasks")
 
-   useEffect(()=>{
-    const save = localStorage.getItem("tasks")
-    setTaskList(JSON.parse(save))
-   },[])
+  try {
+    const parsed = JSON.parse(save)
+    return Array.isArray(parsed) ? parsed : []
+  } catch {
+    return []
+  }
+})
 
-   useEffect(()=>{
-    if(taskList.length > 0){
-      localStorage.setItem("tasks", JSON.stringify(taskList))
-    }
-   }, [taskList])
+console.log("taskList:", taskList, "type:", typeof taskList)
+console.log("isArray:", Array.isArray(taskList))
 
+   useEffect(() => {
+  if (Array.isArray(taskList)) {
+    localStorage.setItem("tasks", JSON.stringify(taskList));
+  }
+}, [taskList]);
   console.log(taskList)
 
    function onAddTask(text){
@@ -50,8 +56,8 @@ function App() {
 
   return (
     <>
-     <div className="min-h-screen grid place-items-center bg-gray-300 p-4">
-       <div className="w-full max-w-md mx-4 flex flex-col gap-4 rounded-xl bg-white shadow-2xl">
+     <div className="min-h-screen grid place-items-center bg-gray-300">
+       <div className="w-80 lg:w-full flex flex-col gap-4 max-w-md rounded-xl bg-white shadow-2xl">
          <h1 className="text-center text-blue-700 font-bold text-2xl p-6">Todo App</h1>
          <TodoForm onAddTask={onAddTask}/>
          <TodoList taskList={taskList} onDelete={onDelete} onEdit={onEdit} onChecked={onChecked} />
