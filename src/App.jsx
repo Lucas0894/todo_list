@@ -4,25 +4,19 @@ import { TodoForm } from "./components/TodoForm"
 
 
 function App() {
-  const [taskList, setTaskList] = useState(() => {
-  const save = localStorage.getItem("tasks")
+  const [taskList, setTaskList] = useState([])
 
-  try {
-    const parsed = JSON.parse(save)
-    return Array.isArray(parsed) ? parsed : []
-  } catch {
-    return []
-  }
-})
+   useEffect(()=>{
+    const save = localStorage.getItem("tasks")
+    setTaskList(JSON.parse(save))
+   },[])
 
-console.log("taskList:", taskList, "type:", typeof taskList)
-console.log("isArray:", Array.isArray(taskList))
+   useEffect(()=>{
+    if(taskList.length > 0){
+      localStorage.setItem("tasks", JSON.stringify(taskList))
+    }
+   }, [taskList])
 
-   useEffect(() => {
-  if (Array.isArray(taskList)) {
-    localStorage.setItem("tasks", JSON.stringify(taskList));
-  }
-}, [taskList]);
   console.log(taskList)
 
    function onAddTask(text){
