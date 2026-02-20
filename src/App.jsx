@@ -6,10 +6,15 @@ import { TodoForm } from "./components/TodoForm"
 function App() {
   const [taskList, setTaskList] = useState([])
 
-   useEffect(()=>{
-    const save = localStorage.getItem("tasks")
+   useEffect(() => {
+  const save = localStorage.getItem("tasks")
+
+  if (save) {
     setTaskList(JSON.parse(save))
-   },[])
+  } else {
+    setTaskList([])
+  }
+}, [])
 
    useEffect(()=>{
     if(taskList.length > 0){
