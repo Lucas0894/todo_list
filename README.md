@@ -34,7 +34,9 @@ Es una app simple para practicar:
 
 ---
 
-## 📦 Estructura del proyecto
+## 📂 Estructura del proyecto
+
+```plaintext
 src/
  ├── components/
  │     ├── TodoList.jsx
