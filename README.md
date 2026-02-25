@@ -1,16 +1,66 @@
-# React + Vite
+# Todo List App – React + Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pequeña aplicación de lista de tareas construida con **React** y **Tailwind CSS**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧠 Descripción
 
-## React Compiler
+Esta aplicación permite agregar, completar y eliminar tareas de una lista.  
+Es una app simple para practicar:
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- Componentización en React
+- Manejo de estados (`useState`)
+- Eventos y lógica de UI
+- Estilos modernos con Tailwind
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💻 Tecnologías utilizadas
+
+- **React**
+- **Tailwind CSS**
+- **JavaScript (ES6+)**
+- **Vite**
+
+---
+
+## 🚀 Funcionalidades
+
+- Agregar nuevas tareas
+- Marcar tareas como completadas
+- Eliminar tareas
+- UI simple y responsiva
+
+---
+
+## 📦 Estructura del proyecto
+src/
+ ├── components/
+ │     ├── TodoList.jsx
+ │     ├── TodoItem.jsx
+ │     └── TodoForm.jsx
+ ├── App.jsx
+ └── main.jsx
+ 
+ ▶️ Cómo ver la app
+Versión desplegada en Vercel: https://tu-app-vercel.vercel.app
+Opcional: ejecutar localmente si querés probar cambios:
+1. Cloná el repositorio:
+git clone https://github.com/Lucas0894/todo_list.git
+2. Instalá las dependencias:
+npm install
+4. Ejecutá la aplicación:
+npm run dev
+5. Abrí el navegador en:
+http://localhost:5173
+
+📌 Notas
+El proyecto no utiliza base de datos, toda la información se guarda en memoria (estado).
+Ideal para practicar componentización, manejo de estados y Tailwind.
+La UI es simple y responsiva, con feedback visual al marcar tareas como completadas o eliminarlas.
+
+📫 Contacto
+Si querés contactarme:
+LinkedIn: https://linkedin.com/in/lucas-cano
+Email: luema94@gmail.com
