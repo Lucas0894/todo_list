@@ -64,5 +64,5 @@ La UI es simple y responsiva, con feedback visual al marcar tareas como completa
 
 📫 Contacto
 Si querés contactarme:
-LinkedIn: https://linkedin.com/in/lucas-cano
+LinkedIn: https://www.linkedin.com/in/lucas-ca%C3%B1o-0a5406223/
 Email: luema94@gmail.com
