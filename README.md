@@ -46,7 +46,7 @@ src/
  └── main.jsx
  
  ▶️ Cómo ver la app
-Versión desplegada en Vercel: https://tu-app-vercel.vercel.app
+Versión desplegada en Vercel: https://todo-list-lucas-pi.vercel.app/
 Opcional: ejecutar localmente si querés probar cambios:
 1. Cloná el repositorio:
 git clone https://github.com/Lucas0894/todo_list.git
