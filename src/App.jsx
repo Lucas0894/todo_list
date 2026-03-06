@@ -17,9 +17,7 @@ function App() {
 }, [])
 
    useEffect(()=>{
-    if(taskList.length > 0){
       localStorage.setItem("tasks", JSON.stringify(taskList))
-    }
    }, [taskList])
 
   console.log(taskList)
