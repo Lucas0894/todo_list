@@ -1,39 +1,36 @@
 import { useState, useEffect } from "react"
 import { TodoList } from "./components/TodoList"
 import { TodoForm } from "./components/TodoForm"
+import { Task } from "./types/task"
 
 
 function App() {
-  const [taskList, setTaskList] = useState([])
-
-   useEffect(() => {
+ const [taskList, setTaskList] = useState<Task[]>(() => {
   const save = localStorage.getItem("tasks")
 
-  if (save) {
-    setTaskList(JSON.parse(save))
-  } else {
-    setTaskList([])
-  }
-}, [])
+  return save ? JSON.parse(save) : []
+})
 
-   useEffect(()=>{
-      localStorage.setItem("tasks", JSON.stringify(taskList))
-   }, [taskList])
+useEffect(() => {
+  localStorage.setItem("tasks", JSON.stringify(taskList))
+}, [taskList])
+
+ 
 
   console.log(taskList)
 
-   function onAddTask(text){
+   function onAddTask(text: string){
     setTaskList([...taskList,
       {id:Date.now(), name: text, complete: false}
     ])
    } 
 
-   function onDelete(id){
+   function onDelete(id: number){
     const newList = taskList.filter((task)=> task.id !== id)
     setTaskList(newList)
    }
 
-   function onEdit(id, text){
+   function onEdit(id: number, text: string){
     console.log(id, text)
     const newList = taskList.map((task)=>{
       return task.id === id? 
@@ -42,7 +39,7 @@ function App() {
     setTaskList(newList)
    }
 
-   function onChecked(id){
+   function onChecked(id: number){
     const newList = taskList.map((task)=>{
       return task.id === id? 
       {...task, complete: !task.complete}: task}
