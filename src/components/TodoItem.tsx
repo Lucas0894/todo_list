@@ -92,7 +92,7 @@ export const TodoItem = ({ task, onDelete, onEdit, onChangeStatus }: TodoItemsPr
                     </div>
                 </div>
                 <div className="flex flex-row justify-center gap-3 lg:shrink-0">
-                    <div className="w-20">
+                    <div className="w-20 mr-4">
                         <button type="button" className="flex items-center gap-1 text-red-600 border border-red-600 px-3 py-0.3 cursor-pointer rounded shadow-sm hover:shadow-md transition-shadow duration-200 hover:bg-gray-100 active:scale-95" onClick={() => onDelete(task.id)}>
                             <Trash2 size={18} />
                             <span>
