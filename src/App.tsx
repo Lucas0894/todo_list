@@ -21,7 +21,7 @@ useEffect(() => {
 
    function onAddTask(text: string){
     setTaskList([...taskList,
-      {id:Date.now(), name: text, complete: false}
+      {id:Date.now(), name: text, status: "pending"}
     ])
    } 
 
@@ -39,13 +39,15 @@ useEffect(() => {
     setTaskList(newList)
    }
 
-   function onChecked(id: number){
-    const newList = taskList.map((task)=>{
-      return task.id === id? 
-      {...task, complete: !task.complete}: task}
-     )
-     setTaskList(newList)
-   }
+   function onChangeStatus(id: number, status: Task["status"]) {
+  const newList = taskList.map((task) => {
+    return task.id === id
+      ? { ...task, status }
+      : task
+  })
+
+  setTaskList(newList)
+}
 
 
   return (
@@ -54,7 +56,7 @@ useEffect(() => {
        <div className="w-80 lg:w-full flex flex-col gap-4 max-w-md rounded-xl bg-white shadow-2xl">
          <h1 className="text-center text-blue-700 font-bold text-2xl p-6">Todo App</h1>
          <TodoForm onAddTask={onAddTask}/>
-         <TodoList taskList={taskList} onDelete={onDelete} onEdit={onEdit} onChecked={onChecked} />
+         <TodoList taskList={taskList} onDelete={onDelete} onEdit={onEdit} onChangeStatus={onChangeStatus} />
       </div>
      </div>
     </>

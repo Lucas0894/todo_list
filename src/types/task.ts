@@ -1,5 +1,9 @@
+export type TaskStatus = "pending" | "in-progress" | "completed"
+
 export interface Task  {
     id: number,
     name: string,
-    complete: boolean
+    status: TaskStatus,
+    dueDate?: string
+    notes?: string
 }
