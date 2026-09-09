@@ -23,7 +23,7 @@ export const TodoItem = ({ task, onDelete, onEdit, onChangeStatus }: TodoItemsPr
             <li className="w-full min-w-0 flex flex-col lg:flex-row lg:items-center gap-3 px-3 pb-4 border-b border-gray-300 ">
                 <div className="flex flex-row flex-1 min-w-0">
                     <div className="flex justify-center w-6">
-                        <input checked={task.status === "completed"} onChange={() => { onChangeStatus(task.id, task.status === "completed" ? "pending" : "completed") }} type="checkbox" />
+                        <input className="accent-green-600" checked={task.status === "completed"} onChange={() => { onChangeStatus(task.id, task.status === "completed" ? "pending" : "completed") }} type="checkbox" />
                     </div>
                     <div className="flex-1 m-0.5 min-w-0">
                         {isEditing ?
