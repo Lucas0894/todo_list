@@ -74,7 +74,7 @@ function App() {
           <div className="mx-6 rounded-xl bg-white shadow-md overflow-hidden">
             <div className="grid grid-cols-3">
               <div className="flex flex-col items-center justify-center py-4 border-r border-gray-200">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-600">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white">
                   <ClipboardList size={20} />
                 </div>
 
@@ -87,7 +87,7 @@ function App() {
                 </span>
               </div>
               <div className="flex flex-col items-center justify-center py-4 border-r border-gray-200">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-yellow-100 text-yellow-500">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-yellow-500 text-white">
                   <Clock3 size={20} />
                 </div>
 
@@ -100,7 +100,7 @@ function App() {
                 </span>
               </div>
               <div className="flex flex-col items-center justify-center py-4">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-green-100 text-green-600">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-green-500 text-white">
                   <Check size={20} />
                 </div>
 
