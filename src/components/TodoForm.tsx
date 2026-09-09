@@ -18,7 +18,10 @@ export const TodoForm = ({ onAddTask }: TodoFormProps) => {
   return (
     <>
       <div>
-        <form className="flex flex-col gap-3 justify-center items-center p-6 lg:flex-row" onSubmit={handleSubmit}>
+        <form className="flex flex-col gap-3 justify-center p-6 lg:flex-row" onSubmit={handleSubmit}>
+          <div>
+            <h3 className="font-bold text-left">Agregar nueva tarea</h3>
+          </div>
           <div className=" w-full lg:flex-1 p-1">
             <input className="w-full h-6 px-2 py-5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 placeholder-gray-400" value={text} onChange={(e) => { setText(e.target.value) }} type="text" placeholder="¿Qué tarea quieres agregar?" required />
           </div>
