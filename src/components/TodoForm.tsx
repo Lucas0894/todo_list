@@ -26,7 +26,7 @@ export const TodoForm = ({ onAddTask }: TodoFormProps) => {
             <input className="w-full h-6 px-2 py-5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 placeholder-gray-400" value={text} onChange={(e) => { setText(e.target.value) }} type="text" placeholder="¿Qué tarea quieres agregar?" required />
           </div>
           <div className="w-full">
-            <button type="submit" className="w-full rounded bg-blue-700 cursor-pointer p-1 text-center text-white shadow-sm hover:shadow-md hover:bg-blue-800 active:scale-95 transition-all duration-200">Agregar Tarea</button>
+            <button type="submit" className="w-full rounded bg-blue-700 cursor-pointer p-2 text-center text-white shadow-sm hover:shadow-md hover:bg-blue-800 active:scale-95 transition-all duration-200">Agregar Tarea</button>
           </div>
         </form>
       </div>
