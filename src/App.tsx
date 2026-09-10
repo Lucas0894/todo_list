@@ -68,9 +68,12 @@ function App() {
     <>
       <div className="min-h-screen grid place-items-center bg-gray-300">
         <div className="w-80 my-5 lg:w-full flex flex-col gap-4 max-w-md rounded-xl bg-white shadow-2xl">
-          <h1 className="text-center text-blue-700 font-bold text-2xl p-6">
+          <h1 className="text-center text-blue-700 font-bold text-2xl -mb-8 p-6">
             Task Manager
           </h1>
+          <h3 className="text-center text-xs text-gray-500 font-semibold">
+            Organizá tus tareas y objetivos
+          </h3>
           <div className="mx-6 rounded-xl bg-white shadow-[0_0_15px_rgba(0,0,0,0.10)] overflow-hidden">
             <div className="grid grid-cols-3">
               <div className="flex flex-col items-center justify-center py-4 border-r border-gray-200">
@@ -82,7 +85,7 @@ function App() {
                   {taskPending}
                 </span>
 
-                <span className="text-sm text-gray-700 text-center">
+                <span className="text-sm text-gray-600 text-center font-semibold">
                   Pendientes
                 </span>
               </div>
@@ -95,7 +98,7 @@ function App() {
                   {taskInProgress}
                 </span>
 
-                <span className="text-sm text-gray-700 text-center">
+                <span className="text-sm text-gray-600 text-center font-semibold">
                   En proceso
                 </span>
               </div>
@@ -108,7 +111,7 @@ function App() {
                   {taskComplete}
                 </span>
 
-                <span className="text-sm text-gray-700 text-center">
+                <span className="text-sm text-gray-600 text-center font-semibold">
                   Completadas
                 </span>
               </div>
