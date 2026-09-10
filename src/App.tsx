@@ -66,7 +66,7 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen grid place-items-center bg-gray-300">
+      <div className="min-h-screen grid place-items-center bg-zinc-100">
         <div className="w-80 my-5 lg:w-full flex flex-col gap-4 max-w-md rounded-xl bg-white shadow-2xl">
           <h1 className="text-center text-blue-700 font-bold text-2xl -mb-8 p-6">
             Task Manager
