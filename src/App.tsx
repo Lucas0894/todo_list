@@ -71,7 +71,7 @@ function App() {
           <h1 className="text-center text-blue-700 font-bold text-2xl p-6">
             Task Manager
           </h1>
-          <div className="mx-6 rounded-xl bg-white shadow-md overflow-hidden">
+          <div className="mx-6 rounded-xl bg-white shadow-[0_0_15px_rgba(0,0,0,0.10)] overflow-hidden">
             <div className="grid grid-cols-3">
               <div className="flex flex-col items-center justify-center py-4 border-r border-gray-200">
                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white">
