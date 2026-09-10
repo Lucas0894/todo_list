@@ -12,7 +12,7 @@ export const TodoList = ({ taskList, onDelete, onEdit, onChangeStatus }: TodoLis
   return (
     <>
       <h2 className="ml-5 text-lg font-semibold text-gray-700">Lista de Tareas</h2>
-      <ul className="flex flex-col gap-4 w-full  overflow-x-hidden">
+      <ul className="flex px-2 py-2 flex-col gap-4 w-full  overflow-x-hidden">
         {
           taskList.map((task) => {
             return <TodoItem key={task.id} task={task} onDelete={onDelete} onEdit={onEdit} onChangeStatus={onChangeStatus} />
