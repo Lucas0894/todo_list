@@ -57,10 +57,10 @@ export const TodoItem = ({ task, onDelete, onEdit, onChangeStatus }: TodoItemsPr
                                 <span
                                     className={
                                         task.status === "completed"
-                                            ? "line-through block transition-all duration-300 break-all text-gray-600"
+                                            ? "line-through font-medium block transition-all duration-300 break-all text-gray-700"
                                             : task.status === "in-progress"
-                                                ? "italic block transition-all duration-300 break-all text-blue-600"
-                                                : "font-semibold block transition-all duration-300 break-all"
+                                                ? "block font-medium transition-all duration-300 break-all text-gray-700"
+                                                : "block font-medium transition-all duration-300 break-all text-gray-700"
                                     }
                                     title={task.name}
                                 >
