@@ -21,13 +21,12 @@ export const TodoItem = ({ task, onDelete, onEdit, onChangeStatus }: TodoItemsPr
     return (
         <>
             <li
-                className={`w-full min-w-0 flex flex-col lg:flex-row lg:items-center gap-3 px-3 pb-4 border-b rounded-xl overflow-hidden shadow-[0_2px_15px_rgba(0,0,0,0.10)] border-gray-300 border-l-4 ${
-                    task.status === "pending"
-                        ? "border-l-blue-500"
-                        : task.status === "in-progress"
-                            ? "border-l-yellow-500"
-                            : "border-l-green-500"
-                }`}
+                className={`w-full min-w-0 flex flex-col lg:flex-row lg:items-center gap-3 px-3 pb-4 border-b rounded-xl overflow-hidden shadow-[0_2px_15px_rgba(0,0,0,0.10)] border-gray-300 border-l-4 ${task.status === "pending"
+                    ? "border-l-blue-500"
+                    : task.status === "in-progress"
+                        ? "border-l-yellow-500"
+                        : "border-l-green-500"
+                    }`}
             >
 
                 <div className="flex flex-row flex-1 min-w-0">
@@ -107,9 +106,6 @@ export const TodoItem = ({ task, onDelete, onEdit, onChangeStatus }: TodoItemsPr
                                 >
                                     {task.name}
                                 </span>
-
-                                {/* BADGE ESTÁTICO */}
-
                                 <div
                                     className={
                                         task.status === "pending"
