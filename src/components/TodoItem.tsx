@@ -22,10 +22,10 @@ export const TodoItem = ({ task, onDelete, onEdit, onChangeStatus }: TodoItemsPr
         <>
             <li
                 className={`w-full min-w-0 flex flex-col lg:flex-row lg:items-center gap-3 px-3 pb-4 border-b rounded-xl overflow-hidden shadow-[0_2px_15px_rgba(0,0,0,0.10)] border-gray-300 border-l-4 ${task.status === "pending"
-                    ? "border-l-blue-500"
-                    : task.status === "in-progress"
-                        ? "border-l-yellow-500"
-                        : "border-l-green-500"
+                        ? "border-l-blue-500"
+                        : task.status === "in-progress"
+                            ? "border-l-yellow-500"
+                            : "border-l-green-500"
                     }`}
             >
 
