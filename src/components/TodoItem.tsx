@@ -22,10 +22,10 @@ export const TodoItem = ({ task, onDelete, onEdit, onChangeStatus }: TodoItemsPr
         <>
             <li
                 className={`w-full min-w-0 flex flex-col lg:flex-row lg:items-center gap-3 px-3 pb-4 border-b rounded-xl overflow-hidden shadow-[0_2px_15px_rgba(0,0,0,0.10)] border-gray-300 border-l-4 ${task.status === "pending"
-                        ? "border-l-blue-500"
-                        : task.status === "in-progress"
-                            ? "border-l-yellow-500"
-                            : "border-l-green-500"
+                    ? "border-l-blue-500"
+                    : task.status === "in-progress"
+                        ? "border-l-yellow-500"
+                        : "border-l-green-500"
                     }`}
             >
 
@@ -51,10 +51,10 @@ export const TodoItem = ({ task, onDelete, onEdit, onChangeStatus }: TodoItemsPr
 
                         {isEditing ? (
 
-                            <div className="px-2 py-1 flex flex-col gap-2">
+                            <div className="flex flex-col">
 
                                 <input
-                                    className="px-2 py-1 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                                    className="w-full px-0 py-0 border-0 outline-none bg-transparent font-medium text-gray-700 focus:ring-0"
                                     value={text}
                                     onChange={(e) => {
                                         setText(e.target.value)
@@ -65,10 +65,10 @@ export const TodoItem = ({ task, onDelete, onEdit, onChangeStatus }: TodoItemsPr
                                 <select
                                     className={
                                         task.status === "pending"
-                                            ? "w-fit px-2 py-1 rounded-full bg-blue-100 text-blue-700 text-sm border-0"
+                                            ? "w-fit px-2 py-1 rounded-full bg-blue-100 text-blue-700 text-sm border-0 mt-1"
                                             : task.status === "in-progress"
-                                                ? "w-fit px-2 py-1 rounded-full bg-yellow-100 text-yellow-700 text-sm border-0"
-                                                : "w-fit px-2 py-1 rounded-full bg-green-100 text-green-700 text-sm border-0"
+                                                ? "w-fit px-2 py-1 rounded-full bg-yellow-100 text-yellow-700 text-sm border-0 mt-1"
+                                                : "w-fit px-2 py-1 rounded-full bg-green-100 text-green-700 text-sm border-0 mt-1"
                                     }
                                     value={task.status}
                                     onChange={(e) =>
